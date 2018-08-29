@@ -1,0 +1,8 @@
+Companion repo:
+https://github.com/StephenGrider/ReactNativeReduxCasts
+
+react-native init albums
+
+react-native run-its
+
+react-native run-android
