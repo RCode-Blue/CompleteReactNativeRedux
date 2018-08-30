@@ -40,9 +40,9 @@ const AlbumDetail = ({album}) => {
           source={{ uri: image }} 
         />
       </CardSection>
-      
+
       <CardSection>
-        <Button />
+        <Button tapAction={() => console.log(title)}/>
       </CardSection>
     </Card>
   );
