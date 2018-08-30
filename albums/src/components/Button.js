@@ -2,10 +2,8 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native'; 
 
 
-const Button = ({ tapAction }) => {
+const Button = ({ tapAction, children }) => {
   const { buttonStyle, textStyle } = styles;
-
-
 
   return (
     <TouchableOpacity 
@@ -13,7 +11,7 @@ const Button = ({ tapAction }) => {
       onPress={tapAction}
       style={buttonStyle}>
       <Text style={textStyle}>
-        Click me!
+        {children}
       </Text>
     </TouchableOpacity>
   );
