@@ -7,7 +7,7 @@ import LoginForm from './components/LoginForm';
 class App extends Component{
   componentWillMount() {
     firebase.initializeApp({
-      apiKey: '***REMOVED***',
+      apiKey: '',
       authDomain: 'rl-tut-reactnative-auth.firebaseapp.com',
       databaseURL: 'https://rl-tut-reactnative-auth.firebaseio.com',
       projectId: 'rl-tut-reactnative-auth',
