@@ -7,15 +7,15 @@ class LoginForm extends Component {
   state = { email: '', password: '', error: '' };
 
   onButtonPress() {
+    console.log("Pressed");
+    
     const { email, password } = this.state;
 
-
-    // Authenticate user
-    firebase.auth().signInWithEmailAndPassword(email, password) // Attempt to sign user in
-      .catch(() => { // if fails
-        firebase.auth().createUserWithEmailAndPassword(email, password) // Attempt to create user account
-          .catch(() => {  // If this fails too...
-            this.setState({ error:"authentication failed." });  // ...error out
+    firebase.auth().signInWithEmailAndPassword(email, password) 
+      .catch(() => { 
+        firebase.auth().createUserWithEmailAndPassword(email, password) 
+          .catch(() => {  
+            this.setState({ error: "authentication failed." }); 
           });
       });
 
@@ -48,20 +48,18 @@ class LoginForm extends Component {
         </CardSection>
 
         <CardSection>
-          <Button onPress={this.onButtonPress.bind(this)}>
+          <Button tapAction={this.onButtonPress.bind(this)}>
             Login
           </Button>
         </CardSection>
       </Card>
-
-
     );
   }
 }
 
 const styles = {
   errorTextStyle: {
-    fontSixe: 20,
+    fontSize: 20,
     alignSelf: 'center',
     color: 'red'
   }
