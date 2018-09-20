@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import { Text } from 'react-native';
+import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { connect } from 'react-redux';
 import { CardSection } from './common';
+import * as actions from '../actions';
 
 
 class ListItem extends Component {
   render(){
-    // console.log(this.props);
+    // console.log("props:");
+    console.log(this.props);
+    
     const { titleStyle } = styles;
+    const { id, title } = this.props.library.item; 
 
     return(
-      <CardSection>
-        <Text style={titleStyle}>
-          {this.props.library.item.title}
-        </Text>
-      </CardSection>
+      <TouchableWithoutFeedback
+        onPress={() => this.props.selectLibrary(id)}
+        >
+        <View>
+          <CardSection>
+            <Text style={titleStyle}>
+              {title}
+            </Text>
+          </CardSection>
+        </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
@@ -25,4 +36,8 @@ const styles = {
   }
 };
 
-export default ListItem;
+export default connect(null, actions)(ListItem);
+// Take actions creators and make sure that when they are called, 
+// the actions go to the right place 
+// then pass actions (all actions specified in src/actions/index.js)
+// to components (ListItem) as props
