@@ -3,7 +3,7 @@
 // and returns:
 //  - the type
 //  - the id of the library list item (libraryId)
-export const selecLibrary = (libraryId) => {  
+export const selectLibrary = (libraryId) => {  
   return{        // action
     type: 'select_library',
     payload: libraryId
