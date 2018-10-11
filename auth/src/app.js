@@ -9,7 +9,7 @@ class App extends Component{
 
   componentWillMount() {
     firebase.initializeApp({
-      apiKey: 'AIzaSyDWYmV4rrarfPeGnLYzCOXOL6jkDJ1JV2c',
+      apiKey: 'AIzaSyDWYmV4rrarfPeGnLYzCOXOL6jkDJ1JV2cx',
       authDomain: 'rl-tut-reactnative-auth.firebaseapp.com',
       databaseURL: 'https://rl-tut-reactnative-auth.firebaseio.com',
       projectId: 'rl-tut-reactnative-auth',
