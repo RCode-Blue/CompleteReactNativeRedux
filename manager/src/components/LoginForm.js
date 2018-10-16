@@ -24,6 +24,8 @@ class LoginForm extends Component {
     const { email, password } = this.props;
 
     console.log('button pressed');
+    console.log(this.props);
+    console.log('end');
 
     this.props.loginUser({ email, password });
   }
@@ -102,7 +104,7 @@ const styles = {
 //   };
 // };
 
-const mapStateToProps = ( { auth }) => {
+const mapStateToProps = ({ auth }) => {
   const { email, password, error, loading } = auth;
 
   // return {
