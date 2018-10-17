@@ -11,7 +11,7 @@ import Router from './Router';
 class App extends Component {
   componentWillMount() {
     const config = {
-        apiKey: 'AIzaSyA0oq4AxNnaPNoz5XtoAcJnKjefn6rnQxYx',
+        apiKey: 'AIzaSyA0oq4AxNnaPNoz5XtoAcJnKjefn6rnQxY',
         authDomain: 'rl-tut-reactnative-manager.firebaseapp.com',
         databaseURL: 'https://rl-tut-reactnative-manager.firebaseio.com',
         projectId: 'rl-tut-reactnative-manager',
